@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro Local</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Cadastro Local</h1>
+        <form>
+            <section class="input-group">
+                <label for="campo">Digite Algo: </label>
+                <input type="text" id="campo" name="campo" required>
+            </section>
+            <button id="salvar" type="submit">Salvar</button>
+            <p id="mensagem" class="mensagem"></p>
+        </form>
+        <button id="apagar">Limpar</button>
+
+        <ul id="listaValores"></ul>
+    </main>
+    <script src="./js//script.js"></script>
+    <script src="./js/listagem.js"></script>
+    <script src="./js/apagar.js"></script>
+</body>
+</html>

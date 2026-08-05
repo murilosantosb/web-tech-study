@@ -65,8 +65,8 @@ form {
     font-weight: 700;
 }
 
-.form-group input[type="text"] {
-    width: 100%;
+.form-group input {
+    width: 94%;
     min-height: 48px;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
@@ -99,3 +99,13 @@ form {
     transform: translateY(-1px);
 }
 
+li {
+    width: 94%;
+    margin-bottom: 5px;
+    min-height: 48px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8f5f5;
+    color: #263657;
+    padding: 0 14px;
+}
