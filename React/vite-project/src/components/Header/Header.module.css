@@ -1,0 +1,13 @@
+
+header {
+    background-color: #BEBEBE;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #696969;
+}
+
+h1.title {
+    margin: 0;
+    font-size: 24px;
+    color: #191970;
+}
