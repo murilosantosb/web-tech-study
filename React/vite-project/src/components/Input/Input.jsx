@@ -9,7 +9,7 @@ const Input = (props) => {
     <section className="input-section">
       <input type="text" placeholder={props.placeholder} className="input" />
       <span>
-        <ButtonIcon>
+        <ButtonIcon variant="primary">
           <FaArrowUp />
         </ButtonIcon>
       </span>

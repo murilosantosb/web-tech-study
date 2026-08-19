@@ -7,7 +7,7 @@ import "./ButtonIcon.css"
 const ButtonIcon = (props) => {
   return (
     <>
-     <button className="button-icon">
+     <button className="button-icon" variant={props.variant} >
         {props.children}
      </button> 
     </>
