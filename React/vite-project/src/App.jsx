@@ -1,4 +1,5 @@
 import './App.css'
+import Card from './components/Card/Card'
 
 // Components
 import Header from './components/Header/Header'
@@ -6,21 +7,8 @@ import Header from './components/Header/Header'
 function App() {
   return (
     <>
-      <Header />
-      <section>
-        <article>
-          <h1>lorem ipsum</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi earum numquam ut voluptatibus assumenda incidunt blanditiis? Unde eaque quis laborum. Fugiat ratione, quae fugit repellendus rerum minus eius blanditiis?</p>
-        </article>
-
-        <article >
-          <h1>lorem ipsum</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi earum numquam ut voluptatibus assumenda incidunt blanditiis? Unde eaque quis laborum. Fugiat ratione, quae fugit repellendus rerum minus eius blanditiis?</p>
-        </article>
-
-        
-
-      </section>
+      <Header title="Meu site" />
+      <Card />
       <hr />
 
       <footer>
