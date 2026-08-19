@@ -1,0 +1,33 @@
+
+
+section.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #20201F;
+  width: 500px;
+  padding: 15px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+input.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color:#a3a3a3;
+  width: 90%;
+}
+
+span {
+    align-self: flex-end;
+}
