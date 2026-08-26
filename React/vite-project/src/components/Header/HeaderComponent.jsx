@@ -4,7 +4,7 @@ import "./Header.css";
 
 
 
-const Header = (props) => {
+const HeaderComponent = (props) => {
 
   return (
     <header>
@@ -13,4 +13,4 @@ const Header = (props) => {
   )
 }
 
-export default Header
+export default HeaderComponent

@@ -1,32 +1,32 @@
 import './App.css'
-import Banner from './components/Banner/Banner'
-import Card from './components/Card/Card'
-import ImgCard from './components/Card/ImgCard/ImgCard'
-import Footer from './components/Footer/Footer'
 
 // Components
-import Header from './components/Header/Header'
-import Input from './components/Input/Input'
+import HeaderComponent from './components/Header/HeaderComponent'
+import InputComponent from './components/Input/InputComponent'
+import CardComponent from './components/Card/CardComponent'
+import ImgCardComponent from './components/Card/ImgCard/ImgCardComponent'
+import BannerComponent from './components/Banner/BannerComponent'
+import FooterComponent from './components/Footer/FooterComponent'
 
 function App() {
   return (
     <main>
-      <Header title="Meu site" />
+      <HeaderComponent title="Meu site" />
 
-      <Input placeholder="Como posso ajudar você hoje?" />
-      
-      <Card />
+      <InputComponent placeholder="Como posso ajudar você hoje?" />
+
+      <CardComponent />
       <hr />
 
-      <ImgCard caption="New Lorem Ipsum" />
+      <ImgCardComponent caption="New Lorem Ipsum" />
 
-      <Banner >
+      <BannerComponent>
         <h1>Bem vindo ao meu site</h1>
         <p>Aqui você ecnontra as melhores ofertas!</p>
-      </Banner>
+      </BannerComponent>
 
 
-      <Footer title="Copyright &copy; 2026"/>
+      <FooterComponent title="Copyright &copy; 2026" />
     </main>
   )
 }

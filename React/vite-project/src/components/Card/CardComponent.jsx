@@ -3,7 +3,7 @@ import React from 'react';
 // Styles
 import "./Card.css";
 
-const Card = () => {
+const CardComponent = () => {
   return (
     <section className="card">
             <img src="/image-card.jpg" alt="Card Image" />
@@ -15,4 +15,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default CardComponent

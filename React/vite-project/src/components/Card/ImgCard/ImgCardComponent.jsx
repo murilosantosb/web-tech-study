@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./ImgCard.css";
 
-const ImgCard = (props) => {
+const ImgCardComponent = (props) => {
   return (
     <div className="image-card">
       <img className="image-card-img" src="/img-card2.jpg" alt={"Card Image" || "Image"} />
@@ -11,4 +11,4 @@ const ImgCard = (props) => {
   )
 }
 
-export default ImgCard
+export default ImgCardComponent

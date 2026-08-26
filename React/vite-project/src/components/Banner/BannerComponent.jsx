@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = (props) => {
+const BannerComponent = (props) => {
   return (
     <>
         {props.children}
@@ -8,4 +8,4 @@ const Banner = (props) => {
   )
 }
 
-export default Banner
+export default BannerComponent
