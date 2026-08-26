@@ -7,6 +7,9 @@ import CardComponent from './components/Card/CardComponent'
 import ImgCardComponent from './components/Card/ImgCard/ImgCardComponent'
 import BannerComponent from './components/Banner/BannerComponent'
 import FooterComponent from './components/Footer/FooterComponent'
+import CountComponent from './components/Count/CountComponent'
+import BoxComponent from './components/Box/BoxComponent'
+import BoxImageComponent from './components/Box/BoxImage/BoxImageComponent'
 
 function App() {
   return (
@@ -15,15 +18,22 @@ function App() {
 
       <InputComponent placeholder="Como posso ajudar você hoje?" />
 
+      <CountComponent />
       <CardComponent />
+      <BoxComponent />
+
       <hr />
 
       <ImgCardComponent caption="New Lorem Ipsum" />
+
+      <BoxImageComponent />
+      
 
       <BannerComponent>
         <h1>Bem vindo ao meu site</h1>
         <p>Aqui você ecnontra as melhores ofertas!</p>
       </BannerComponent>
+
 
 
       <FooterComponent title="Copyright &copy; 2026" />

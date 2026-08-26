@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,  
+      "title": "Box 1",
+      "description": "Lorem ipsum dolor sit amet",
+      "link": "#"
+    },
+    {
+        "id": 2,
+        "title": "Box 2",
+        "description": "Lorem ipsum dolor sit amet",
+        "link": "#"
+    },
+    {
+      "id": 3,  
+      "title": "Box 3",
+      "description": "Lorem ipsum dolor sit amet",
+      "link": "#"
+    },
+    {
+      "id": 4,  
+      "title": "Box 4",
+      "description": "Lorem ipsum dolor sit amet",
+      "link": "#"
+    }
+]

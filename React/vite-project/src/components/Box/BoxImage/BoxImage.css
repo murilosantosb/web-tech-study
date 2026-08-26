@@ -1,0 +1,50 @@
+.box-image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box-image {
+    background: #FF9900;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgb(128, 126, 126);
+}
+
+.box-image img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.box-image h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #232F3E;
+    padding-bottom: 10px;
+}
+
+.box-image p {
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.box-image a {
+    color: #840505;
+    text-decoration: none;
+}
+
+.box-image a:hover {
+    text-decoration: underline;
+}
+
+.box-image strong {
+    color: #232F3E;
+}

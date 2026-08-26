@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "titulo": "AWS Certified Cloud Practitioner",
+    "descricao": "Certificação fundamental para quem deseja demonstrar conhecimento geral sobre conceitos de nuvem, serviços, segurança, arquitetura e custos da AWS.",
+    "preco_prova": "R$ 100",
+    "imagem_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+  },
+  {
+    "id": 2,
+    "titulo": "AWS Certified AI Practitioner",
+    "descricao": "Certificação voltada para fundamentos de inteligência artificial, machine learning e IA generativa na AWS.",
+    "preco_prova": "R$ 100",
+    "imagem_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+  },
+  {
+    "id": 3,
+    "titulo": "AWS Certified Solutions Architect – Associate",
+    "descricao": "Certificação para profissionais que projetam arquiteturas distribuídas, seguras, resilientes e eficientes utilizando serviços da AWS.",
+    "preco_prova": "R$ 150",
+    "imagem_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+  },
+  {
+    "id": 4,
+    "titulo": "AWS Certified Developer – Associate",
+    "descricao": "Certificação para desenvolvedores que trabalham com desenvolvimento, implantação e manutenção de aplicações na AWS.",
+    "preco_prova": "R$ 150",
+    "imagem_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+  },
+  {
+    "id": 5,
+    "titulo": "AWS Certified CloudOps Engineer – Associate",
+    "descricao": "Certificação focada em implantação, gerenciamento, monitoramento e operação de workloads na AWS.",
+    "preco_prova": "R$ 150",
+    "imagem_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+  },
+  {
+    "id": 6,
+    "titulo": "AWS Certified Data Engineer – Associate",
+    "descricao": "Certificação para profissionais que projetam, implementam e mantêm pipelines e soluções de dados utilizando serviços da AWS.",
+    "preco_prova": "R$ 150",
+    "imagem_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+  },
+  {
+    "id": 7,
+    "titulo": "AWS Certified Machine Learning Engineer – Associate",
+    "descricao": "Certificação voltada para implementação e operacionalização de workloads de machine learning utilizando serviços da AWS.",
+    "preco_prova": "R$ 150",
+    "imagem_url": "https://images.unsplash.com/photo-1555255707-c07966088b7b"
+  },
+  {
+    "id": 8,
+    "titulo": "AWS Certified Solutions Architect – Professional",
+    "descricao": "Certificação avançada para profissionais responsáveis por projetar soluções complexas, escaláveis, resilientes e seguras na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1518770660439-4636190af475"
+  },
+  {
+    "id": 9,
+    "titulo": "AWS Certified DevOps Engineer – Professional",
+    "descricao": "Certificação avançada para profissionais que implementam e gerenciam práticas de CI/CD, automação, monitoramento e entrega contínua na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1556075798-4825dfaaf498"
+  },
+  {
+    "id": 10,
+    "titulo": "AWS Certified Generative AI Developer – Professional",
+    "descricao": "Certificação avançada focada no desenvolvimento de aplicações utilizando modelos de inteligência artificial generativa na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1676299081847-824916de030a"
+  },
+  {
+    "id": 11,
+    "titulo": "AWS Certified Security – Specialty",
+    "descricao": "Certificação especializada em segurança de dados, infraestrutura, aplicações, identidade e controle de acesso na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3"
+  },
+  {
+    "id": 12,
+    "titulo": "AWS Certified Advanced Networking – Specialty",
+    "descricao": "Certificação especializada em desenvolvimento e implementação de soluções avançadas de redes na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+  },
+  {
+    "id": 13,
+    "titulo": "AWS Certified Machine Learning – Specialty",
+    "descricao": "Certificação especializada em projetar, implementar e operar soluções de machine learning na AWS.",
+    "preco_prova": "R$ 300",
+    "imagem_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+  }
+]
