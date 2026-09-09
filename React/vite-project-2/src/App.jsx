@@ -2,6 +2,7 @@ import HeaderComponent from "./Components/Header/HeaderComponent"
 import FooterComponent from "./Components/Footer/FooterComponent"
 import "./global.css"
 import Router from "./Routes/Router"
+import NavBar from "./Components/Nav/Navbar"
 
 function App() {
 
