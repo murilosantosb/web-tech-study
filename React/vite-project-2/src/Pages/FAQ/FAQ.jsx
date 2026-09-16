@@ -1,41 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './FAQ.css'
 
 const FAQ = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [activeIndex, setActiveIndex] = useState(null)
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [faq, setFaq] = useState([]);
 
-  const faqData = [
-    {
-      question: 'O que é esta aplicação?',
-      answer: 'Esta é uma aplicação de estudo de tecnologias web, focada em React e Vite.'
-    },
-    {
-      question: 'Como funciona a busca do FAQ?',
-      answer: 'Basta digitar palavras-chave no campo de pesquisa para filtrar as perguntas disponíveis.'
-    },
-    {
-      question: 'Como posso entrar em contato?',
-      answer: 'Você pode utilizar a nossa página de contato para enviar suas dúvidas.'
-    },
-    {
-      question: 'A aplicação é responsiva?',
-      answer: 'Sim, a aplicação foi desenvolvida para funcionar em diversos tamanhos de tela.'
-    },
-    {
-      question: 'Quais tecnologias foram utilizadas?',
-      answer: 'Utilizamos React para a interface, Vite para o build e CSS puro para a estilização.'
-    }
-  ]
 
-  const filteredFaq = faqData.filter(item =>
-    item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.answer.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredFaq = faq.filter(item =>
+    item.pergunta.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.resposta.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  const toggleItem = (index) => {
-    setActiveIndex(activeIndex === index ? null : index)
+  const toggleItem = (id) => {
+    setActiveIndex(activeIndex === id ? null : id)
   }
+
+  useEffect(() => {
+    fetch("http://localhost:3000/faq")
+      .then((response) => response.json())
+      .then((data) => setFaq(data))
+      .catch((error) => console.log(error))
+  }, [])
 
   return (
     <section className='faq-container'>
@@ -53,18 +39,18 @@ const FAQ = () => {
 
       <div className='faq-list'>
         {filteredFaq.length > 0 ? (
-          filteredFaq.map((item, index) => (
+          filteredFaq.map((item) => (
             <div
-              key={index}
-              className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-              onClick={() => toggleItem(index)}
+              key={item.id}
+              className={`faq-item ${activeIndex === item.id ? 'active' : ''}`}
+              onClick={() => toggleItem(item.id)}
             >
               <div className='faq-question'>
-                {item.question}
-                <span className='faq-icon'>{activeIndex === index ? '-' : '+'}</span>
+                {item.pergunta}
+                <span className='faq-icon'>{activeIndex === item.id ? '-' : '+'}</span>
               </div>
               <div className='faq-answer'>
-                <p>{item.answer}</p>
+                <p>{item.resposta}</p>
               </div>
             </div>
           ))
