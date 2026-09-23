@@ -6,6 +6,7 @@ import NotFound from '../Pages/NotFound/NotFound'
 import FAQ from '../Pages/FAQ/FAQ'
 import NavBar from '../Components/Nav/Navbar'
 import Usuario from '../Pages/Usuarios/Usuario'
+import Cadastro from '../Pages/Cadastro/Cadastro'
 
 
 const Router = () => {
@@ -17,6 +18,7 @@ const Router = () => {
             <Route path='/sobre' element={<Sobre />}/>
             <Route path='/faq' element={<FAQ />}/>
             <Route path='/usuarios' element={<Usuario />}/>
+            <Route path='/cadastro' element={<Cadastro />}/>
             <Route path='*' element={<NotFound />}/>
         </Routes>
     </BrowserRouter>
