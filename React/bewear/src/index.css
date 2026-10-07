@@ -1,0 +1,70 @@
+:root {
+  /* =========================
+     CORES PRINCIPAIS
+     ========================= */
+
+  --color-primary: #5B28E3;
+  --color-primary-hover: #4D20C7;
+  --color-primary-light: #8B70E7;
+
+  --color-black: #000000;
+  --color-text: #202020;
+  --color-text-secondary: #656565;
+
+  --color-white: #FFFFFF;
+
+  /* =========================
+     CINZAS / BACKGROUND
+     ========================= */
+
+  --color-background: #D3D3D3;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F1F1F1;
+
+  --color-gray-100: #F9F9F9;
+  --color-gray-200: #F1F1F1;
+  --color-gray-300: #EAEAEA;
+  --color-gray-400: #D8D8D8;
+  --color-gray-500: #CCCCCC;
+  --color-gray-600: #B9B9B9;
+  --color-gray-700: #656565;
+
+  /* =========================
+     STATUS
+     ========================= */
+
+  --color-success: #00AC1F;
+  --color-success-light: #E8F8EB;
+
+  /* =========================
+     BORDAS
+     ========================= */
+
+  --color-border: #EAEAEA;
+  --color-border-dark: #D8D8D8;
+
+  /* =========================
+     HERO / GRADIENTE
+     ========================= */
+
+  --gradient-hero: linear-gradient(
+    180deg,
+    #896BE7 0%,
+    #D1D2E3 100%
+  );
+
+  /* =========================
+     TEXTO
+     ========================= */
+
+  --color-text-primary: #202020;
+  --color-text-muted: #656565;
+  --color-text-white: #FFFFFF;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
