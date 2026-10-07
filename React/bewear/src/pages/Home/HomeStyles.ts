@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.main`
-    padding: 5px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
 
     .img-mobile {
         display: block;
