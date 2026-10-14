@@ -9,6 +9,12 @@ export const ClothingCardContainer = styled.section`
     width: 280px;
     height: 420px;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 
     @media (max-width: 768px) {
         width: 240px;

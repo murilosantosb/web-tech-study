@@ -21,6 +21,12 @@ export interface ProductImage {
     order: number;
 }
 
+export interface ProductVideo {
+    id: string;
+    url: string;
+    alt: string;
+}
+
 export interface Product {
     id: string;
     slug: string;
@@ -32,6 +38,7 @@ export interface Product {
     brandId: string;
     categoryId: string;
     images: ProductImage[];
+    videos?: ProductVideo[];
     colors?: string[];
     sizes?: string[];
     featured?: boolean;
@@ -51,6 +58,7 @@ export interface Banner {
     active: boolean;
     bgColor?: string;
     isMain?: boolean;
+    productId?: string;
 }
 
 export interface HomeConfig {

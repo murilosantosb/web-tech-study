@@ -59,7 +59,7 @@ const Home = () => {
                         key={product.id}
                         productId={product.id}
                         title={product.name}
-                        description={product.description || ''}
+                        description={''}
                         price={product.price ?? null}
                         pathImage={product.images[0]?.url || ''}
                     />

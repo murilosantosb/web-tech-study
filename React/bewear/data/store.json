@@ -78,9 +78,9 @@
   "products": [
     {
       "id": "product-clothing-1",
-      "slug": "nike-therma-fit-1",
-      "name": "Nike Therma FIT Headed",
-      "description": "Men´s Fleece Shacket",
+      "slug": "nike-therma-fit-shacket-light",
+      "name": "Nike Therma-FIT Light Shacket",
+      "description": "Eleve seu estilo casual com uma peça que traz o conforto do fleece com um visual polido. Esta sobreposição com botões oferece linhas modernas e limpas, sendo perfeita para ser usada sozinha ou como camada. Nosso fleece premium, suave em ambos os lados, proporciona mais calor e maciez, mantendo a estrutura leve que você já conhece.",
       "price": 380,
       "currency": "BRL",
       "brandId": "brand-nike",
@@ -89,16 +89,17 @@
         {
           "id": "img-clothing-1",
           "url": "/clothes/clothing-1.png",
-          "alt": "Nike Therma FIT Headed",
+          "alt": "Nike Therma-FIT Light Shacket",
           "type": "primary"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "id": "product-clothing-2",
-      "slug": "nike-therma-fit-2",
-      "name": "Nike Therma FIT Headed",
-      "description": "Men´s Fleece Shacket",
+      "slug": "nike-therma-fit-shacket-mid",
+      "name": "Nike Therma-FIT Mid Shacket",
+      "description": "A fusão perfeita entre a elegância de uma camisa e a proteção de uma jaqueta. Desenvolvida com tecnologia Therma-FIT, esta peça retém o calor natural do corpo enquanto permite a respirabilidade. Ideal para dias de transição, combinando a sofisticação urbana com o conforto térmico indispensável para o inverno.",
       "price": 520,
       "currency": "BRL",
       "brandId": "brand-nike",
@@ -107,16 +108,17 @@
         {
           "id": "img-clothing-2",
           "url": "/clothes/clothing-2.png",
-          "alt": "Nike Therma FIT Headed",
+          "alt": "Nike Therma-FIT Mid Shacket",
           "type": "primary"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "id": "product-clothing-3",
-      "slug": "nike-therma-fit-3",
-      "name": "Nike Therma FIT Headed",
-      "description": "Men´s Fleece Shacket",
+      "slug": "nike-therma-fit-shacket-premium",
+      "name": "Nike Therma-FIT Premium Shacket",
+      "description": "O ápice do conforto térmico e estilo contemporâneo. Esta shacket premium utiliza tecidos de alta densidade para máxima proteção contra o vento, sem sacrificar a mobilidade. Com um corte estruturado e acabamento refinado, é a peça chave para quem não abre mão da performance da Nike em um visual sofisticadamente casual.",
       "price": 749,
       "currency": "BRL",
       "brandId": "brand-nike",
@@ -125,16 +127,23 @@
         {
           "id": "img-clothing-3",
           "url": "/clothes/clothing-3.png",
-          "alt": "Nike Therma FIT Headed",
+          "alt": "Nike Therma-FIT Premium Shacket",
           "type": "primary"
+        }
+      ],
+      "videos": [
+        {
+          "id": "vid-clothing-3",
+          "url": "/clothes/clothing-3-video.mp4",
+          "alt": "Vídeo Nike Therma-FIT Premium Shacket"
         }
       ]
     },
     {
       "id": "product-clothing-4",
-      "slug": "nike-therma-fit-4",
-      "name": "Nike Therma FIT Headed",
-      "description": "Men´s Fleece Shacket",
+      "slug": "nike-therma-fit-shacket-urban",
+      "name": "Nike Therma-FIT Urban Shacket",
+      "description": "Projetada para o ritmo frenético da cidade, a Urban Shacket combina a leveza necessária para o dia a dia com o isolamento térmico da linha Therma-FIT. Sua versatilidade permite transitar facilmente entre o ambiente de trabalho e o lazer, mantendo você aquecido com um design minimalista e funcional.",
       "price": 490,
       "currency": "BRL",
       "brandId": "brand-nike",
@@ -143,17 +152,18 @@
         {
           "id": "img-clothing-4",
           "url": "/clothes/clothing-4.png",
-          "alt": "Nike Therma FIT Headed",
+          "alt": "Nike Therma-FIT Urban Shacket",
           "type": "primary"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "id": "product-tenis-01",
       "slug": "air-max-pulse",
       "name": "Air Max Pulse",
-      "description": null,
-      "price": null,
+      "description": "Sinta a energia da cidade a cada passo. O Air Max Pulse combina a herança icônica da linha Air com a modernidade urbana. Sua unidade de amortecimento visível oferece conforto excepcional para longas caminhadas, enquanto o design aerodinâmico garante um visual arrojado e contemporâneo para qualquer ocasião.",
+      "price": 899,
       "currency": "BRL",
       "brandId": "brand-nike",
       "categoryId": "category-tenis",
@@ -164,14 +174,21 @@
           "alt": "Air Max Pulse",
           "type": "primary"
         }
+      ],
+      "videos": [
+        {
+          "id": "vid-tenis-01",
+          "url": "/clothes/tenis-01-video.mp4",
+          "alt": "Vídeo Air Max Pulse"
+        }
       ]
     },
     {
       "id": "product-tenis-02",
       "slug": "nike-dunk-low",
       "name": "Nike Dunk Low",
-      "description": null,
-      "price": null,
+      "description": "Um clássico que nunca sai de moda. O Nike Dunk Low traz a essência do basquete dos anos 80 para o lifestyle atual. Com couro de alta qualidade e solado aderente, este tênis oferece durabilidade e estilo atemporal, sendo a escolha perfeita para quem busca versatilidade e autenticidade no streetwear.",
+      "price": 729,
       "currency": "BRL",
       "brandId": "brand-nike",
       "categoryId": "category-tenis",
@@ -182,14 +199,21 @@
           "alt": "Nike Dunk Low",
           "type": "primary"
         }
+      ],
+      "videos": [
+        {
+          "id": "vid-tenis-02",
+          "url": "/clothes/tenis-2-video.mp4",
+          "alt": "Vídeo Nike Dunk Low"
+        }
       ]
     },
     {
       "id": "product-blusa-azul",
       "slug": "blusa-azul-marinho",
-      "name": "Nova Coleção",
-      "description": null,
-      "price": null,
+      "name": "Blusa Urban Navy",
+      "description": "A elegância do azul marinho encontra o conforto absoluto. Esta peça foi desenvolvida para quem busca um visual clean e sofisticado sem abrir mão do bem-estar. Tecido respirável de alta tecnologia que se adapta ao corpo, proporcionando um caimento impecável e um toque suave na pele durante todo o dia.",
+      "price": 259,
       "currency": "BRL",
       "brandId": "brand-nike",
       "categoryId": "category-jaquetas-moletons",
@@ -197,10 +221,11 @@
         {
           "id": "img-blusa-azul",
           "url": "/clothes/blusa-azul-marinho.png",
-          "alt": "Blusa Azul Marinho",
+          "alt": "Blusa Urban Navy",
           "type": "primary"
         }
-      ]
+      ],
+      "videos": []
     }
   ],
   "banners": [
@@ -215,14 +240,16 @@
       "title": "Air Max Pulse",
       "image": "/clothes/tenis-01.png",
       "bgColor": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
-      "active": true
+      "active": true,
+      "productId": "product-tenis-01"
     },
     {
       "id": "banner-tenis-2",
       "title": "Nike Dunk Low",
       "image": "/clothes/tenis-02.png",
       "bgColor": "linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)",
-      "active": true
+      "active": true,
+      "productId": "product-tenis-02"
     },
     {
       "id": "banner-model",
@@ -230,7 +257,8 @@
       "image": "/clothes/blusa-azul-marinho.png",
       "bgColor": "#dbeafe",
       "isMain": true,
-      "active": true
+      "active": true,
+      "productId": "product-blusa-azul"
     }
   ],
   "home": {
