@@ -9,6 +9,7 @@ export const NavBarContainer = styled.nav`
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
+    position: relative;
 `;
 
 export const TopRow = styled.div`
@@ -18,6 +19,7 @@ export const TopRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 `;
 
 export const LeftSection = styled.div`
@@ -96,5 +98,78 @@ export const NavLink = styled.li`
 
     &:hover {
         color: #888;
+    }
+`;
+
+/* Mobile Menu Styles */
+
+export const MenuOverlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    backdrop-filter: blur(2px);
+`;
+
+export const MobilePanel = styled.div`
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: ${props => props.isOpen ? 'translateX(0)' : 'translateX(100%)'};
+`;
+
+export const PanelHeader = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+`;
+
+export const MobileNavList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+`;
+
+export const MobileNavLink = styled.li`
+    font-size: 16px;
+    font-weight: 500;
+    color: #202020;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: #888;
+    }
+`;
+
+/* Responsive Utility Classes */
+
+export const MobileOnly = styled.div`
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+    }
+`;
+
+export const DesktopOnly = styled.div`
+    display: flex;
+    @media (max-width: 768px) {
+        display: none;
     }
 `;

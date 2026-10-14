@@ -1,0 +1,258 @@
+{
+  "brands": [
+    {
+      "id": "brand-nike",
+      "name": "Nike",
+      "slug": "nike",
+      "logo": "/icons/simple-icons_nike.png"
+    },
+    {
+      "id": "brand-adidas",
+      "name": "Adidas",
+      "slug": "adidas",
+      "logo": "/icons/simple-icons_adidas.png"
+    },
+    {
+      "id": "brand-puma",
+      "name": "Puma",
+      "slug": "puma",
+      "logo": "/icons/simple-icons_puma.png"
+    },
+    {
+      "id": "brand-new-balance",
+      "name": "New Balance",
+      "slug": "new-balance",
+      "logo": "/icons/simple-icons_newbalance.png"
+    },
+    {
+      "id": "brand-converse",
+      "name": "Converse",
+      "slug": "converse",
+      "logo": "/icons/simple-icons_convese.png"
+    },
+    {
+      "id": "brand-polo",
+      "name": "Polo",
+      "slug": "polo",
+      "logo": "/icons/simple-icons_polo.png"
+    },
+    {
+      "id": "brand-zara",
+      "name": "Zara",
+      "slug": "zara",
+      "logo": "/icons/simple-icons_zara.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-camisetas",
+      "name": "Camisetas",
+      "slug": "camisetas"
+    },
+    {
+      "id": "category-bermuda-shorts",
+      "name": "Bermuda & Shorts",
+      "slug": "bermuda-shorts"
+    },
+    {
+      "id": "category-calcas",
+      "name": "Calças",
+      "slug": "calcas"
+    },
+    {
+      "id": "category-jaquetas-moletons",
+      "name": "Jaquetas & Moletons",
+      "slug": "jaquetas-moletons"
+    },
+    {
+      "id": "category-tenis",
+      "name": "Tênis",
+      "slug": "tenis"
+    },
+    {
+      "id": "category-acessorios",
+      "name": "Acessórios",
+      "slug": "acessorios"
+    }
+  ],
+  "products": [
+    {
+      "id": "product-clothing-1",
+      "slug": "nike-therma-fit-1",
+      "name": "Nike Therma FIT Headed",
+      "description": "Men´s Fleece Shacket",
+      "price": 380,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-jaquetas-moletons",
+      "images": [
+        {
+          "id": "img-clothing-1",
+          "url": "/clothes/clothing-1.png",
+          "alt": "Nike Therma FIT Headed",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-clothing-2",
+      "slug": "nike-therma-fit-2",
+      "name": "Nike Therma FIT Headed",
+      "description": "Men´s Fleece Shacket",
+      "price": 520,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-jaquetas-moletons",
+      "images": [
+        {
+          "id": "img-clothing-2",
+          "url": "/clothes/clothing-2.png",
+          "alt": "Nike Therma FIT Headed",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-clothing-3",
+      "slug": "nike-therma-fit-3",
+      "name": "Nike Therma FIT Headed",
+      "description": "Men´s Fleece Shacket",
+      "price": 749,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-jaquetas-moletons",
+      "images": [
+        {
+          "id": "img-clothing-3",
+          "url": "/clothes/clothing-3.png",
+          "alt": "Nike Therma FIT Headed",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-clothing-4",
+      "slug": "nike-therma-fit-4",
+      "name": "Nike Therma FIT Headed",
+      "description": "Men´s Fleece Shacket",
+      "price": 490,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-jaquetas-moletons",
+      "images": [
+        {
+          "id": "img-clothing-4",
+          "url": "/clothes/clothing-4.png",
+          "alt": "Nike Therma FIT Headed",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-tenis-01",
+      "slug": "air-max-pulse",
+      "name": "Air Max Pulse",
+      "description": null,
+      "price": null,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-tenis",
+      "images": [
+        {
+          "id": "img-tenis-01",
+          "url": "/clothes/tenis-01.png",
+          "alt": "Air Max Pulse",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-tenis-02",
+      "slug": "nike-dunk-low",
+      "name": "Nike Dunk Low",
+      "description": null,
+      "price": null,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-tenis",
+      "images": [
+        {
+          "id": "img-tenis-02",
+          "url": "/clothes/tenis-02.png",
+          "alt": "Nike Dunk Low",
+          "type": "primary"
+        }
+      ]
+    },
+    {
+      "id": "product-blusa-azul",
+      "slug": "blusa-azul-marinho",
+      "name": "Nova Coleção",
+      "description": null,
+      "price": null,
+      "currency": "BRL",
+      "brandId": "brand-nike",
+      "categoryId": "category-jaquetas-moletons",
+      "images": [
+        {
+          "id": "img-blusa-azul",
+          "url": "/clothes/blusa-azul-marinho.png",
+          "alt": "Blusa Azul Marinho",
+          "type": "primary"
+        }
+      ]
+    }
+  ],
+  "banners": [
+    {
+      "id": "banner-hero",
+      "imageDesktop": "/Image 1 Desktop.png",
+      "imageMobile": "/Image 1 Mobile.png",
+      "active": true
+    },
+    {
+      "id": "banner-tenis-1",
+      "title": "Air Max Pulse",
+      "image": "/clothes/tenis-01.png",
+      "bgColor": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+      "active": true
+    },
+    {
+      "id": "banner-tenis-2",
+      "title": "Nike Dunk Low",
+      "image": "/clothes/tenis-02.png",
+      "bgColor": "linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)",
+      "active": true
+    },
+    {
+      "id": "banner-model",
+      "title": "Nova Coleção",
+      "image": "/clothes/blusa-azul-marinho.png",
+      "bgColor": "#dbeafe",
+      "isMain": true,
+      "active": true
+    }
+  ],
+  "home": {
+    "bestSellers": [
+      "product-clothing-4",
+      "product-clothing-3",
+      "product-clothing-2",
+      "product-clothing-1"
+    ],
+    "partnerBrands": [
+      "brand-nike",
+      "brand-adidas",
+      "brand-puma",
+      "brand-new-balance",
+      "brand-converse",
+      "brand-polo",
+      "brand-zara"
+    ],
+    "promotionalBanners": [
+      "banner-tenis-1",
+      "banner-tenis-2",
+      "banner-model"
+    ]
+  }
+}

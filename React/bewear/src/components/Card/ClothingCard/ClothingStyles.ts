@@ -6,13 +6,25 @@ export const ClothingCardContainer = styled.section`
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
-    width: 330px;
-    height: 500px;
+    width: 280px;
+    height: 420px;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+        width: 240px;
+        height: 360px;
+        scroll-snap-align: start;
+    }
 
     img {
         border-radius: 15px;
-        width: 330px;
-        height: 380px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+
+        @media (max-width: 768px) {
+            height: 240px;
+        }
     }
 
     p.clothing-title {
@@ -26,4 +38,4 @@ export const ClothingCardContainer = styled.section`
     span.clothing-price {
         font-weight: 600;
     }
-`
+`;

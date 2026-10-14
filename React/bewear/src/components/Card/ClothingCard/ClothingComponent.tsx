@@ -1,26 +1,29 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 import { ClothingCardContainer } from "./ClothingStyles";
 
 type Props = {
     pathImage: string,
     title: string,
     description: string,
-    price: number, 
+    price: number | null,
+    productId: string,
 }
 
 const ClothingComponent = (props: Props) => {
   return (
-    <ClothingCardContainer>
-        <img src={`./clothes/${props.pathImage}`} alt={`${props.title}`} />
-        <div>
-            <p className='clothing-title'>{props.title}</p>
-            <p className='clothing-description'>{props.description}</p>
-        </div>
-        <span className='clothing-price'>
-            R$ {props.price}
-        </span>
-    </ClothingCardContainer>
+    <Link to={`/product/${props.productId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <ClothingCardContainer>
+          <img src={props.pathImage} alt={`${props.title}`} />
+          <div>
+              <p className='clothing-title'>{props.title}</p>
+              <p className='clothing-description'>{props.description}</p>
+          </div>
+          <span className='clothing-price'>
+              {props.price !== null ? `R$ ${props.price}` : 'Preço indisponível'}
+          </span>
+      </ClothingCardContainer>
+    </Link>
   )
 }
 

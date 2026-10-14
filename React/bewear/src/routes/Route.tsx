@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
 
 import Home from "../pages/Home/Home.tsx";
+import ProductPage from "../pages/Product/ProductPage.tsx";
 
 const Router = () => {
   return (
@@ -9,7 +10,7 @@ const Router = () => {
         <NavBarComponent />
         <Routes>
             <Route path='/' element={ <Home /> }/>
-
+            <Route path='/product/:id' element={ <ProductPage /> }/>
         </Routes>
     </BrowserRouter>
   )

@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.main`
-    padding: 10px 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 
     .img-mobile {
         display: block;
@@ -23,14 +27,13 @@ export const HomeContainer = styled.main`
 
     .img-desktop {
         display: none;
-        width: 90%;
+        width: 100%;
         border-radius: 15px;
         height: 800px;
-
-        object-fit: cover;
+        
 
         @media (min-width: 600px) {
             display: block;
         }
     }
-`
+`;

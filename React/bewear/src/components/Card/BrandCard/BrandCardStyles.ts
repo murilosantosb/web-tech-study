@@ -8,6 +8,11 @@ export const BrandCardContainer = styled.div`
     gap: 12px;
     transition: transform 0.2s ease;
     cursor: pointer;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+        scroll-snap-align: start;
+    }
 
     &:hover {
         transform: translateY(-5px);
@@ -39,8 +44,8 @@ export const BrandCardContainer = styled.div`
 
         /* Desktop size */
         @media (min-width: 769px) {
-            width: 200px;
-            height: 108px;
+            width: 150px;
+            height: 80px;
         }
     }
 

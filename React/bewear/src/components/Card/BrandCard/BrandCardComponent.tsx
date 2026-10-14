@@ -9,7 +9,7 @@ const BrandCardComponent = ({ path, name }: Props) => {
     return (
         <BrandCardContainer>
             <div className="image-wrapper">
-                <img src={`/icons/${path}`} alt={`Logo ${name}`} />
+                <img src={path} alt={`Logo ${name}`} />
             </div>
             <p>{name}</p>
         </BrandCardContainer>
