@@ -89,8 +89,9 @@
         {
           "id": "img-clothing-1",
           "url": "/clothes/clothing-1.png",
-          "alt": "Nike Therma-FIT Light Shacket",
-          "type": "primary"
+          "alt": "Nike Therma-FIT Light Shacket Front",
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": []
@@ -108,8 +109,9 @@
         {
           "id": "img-clothing-2",
           "url": "/clothes/clothing-2.png",
-          "alt": "Nike Therma-FIT Mid Shacket",
-          "type": "primary"
+          "alt": "Nike Therma-FIT Mid Shacket Front",
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": []
@@ -128,7 +130,8 @@
           "id": "img-clothing-3",
           "url": "/clothes/clothing-3.png",
           "alt": "Nike Therma-FIT Premium Shacket",
-          "type": "primary"
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": [
@@ -153,7 +156,8 @@
           "id": "img-clothing-4",
           "url": "/clothes/clothing-4.png",
           "alt": "Nike Therma-FIT Urban Shacket",
-          "type": "primary"
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": []
@@ -172,7 +176,8 @@
           "id": "img-tenis-01",
           "url": "/clothes/tenis-01.png",
           "alt": "Air Max Pulse",
-          "type": "primary"
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": [
@@ -197,7 +202,8 @@
           "id": "img-tenis-02",
           "url": "/clothes/tenis-02.png",
           "alt": "Nike Dunk Low",
-          "type": "primary"
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": [
@@ -213,7 +219,7 @@
       "slug": "blusa-azul-marinho",
       "name": "Blusa Urban Navy",
       "description": "A elegância do azul marinho encontra o conforto absoluto. Esta peça foi desenvolvida para quem busca um visual clean e sofisticado sem abrir mão do bem-estar. Tecido respirável de alta tecnologia que se adapta ao corpo, proporcionando um caimento impecável e um toque suave na pele durante todo o dia.",
-      "price": 259,
+      "price": null,
       "currency": "BRL",
       "brandId": "brand-nike",
       "categoryId": "category-jaquetas-moletons",
@@ -222,7 +228,8 @@
           "id": "img-blusa-azul",
           "url": "/clothes/blusa-azul-marinho.png",
           "alt": "Blusa Urban Navy",
-          "type": "primary"
+          "type": "primary",
+          "order": 1
         }
       ],
       "videos": []

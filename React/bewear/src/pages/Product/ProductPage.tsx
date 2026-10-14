@@ -1,57 +1,145 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useProduct } from '../../hooks/useProduct';
-import { HomeContainer } from '../Home/HomeStyles';
+import { useRelatedProducts } from '../../hooks/useRelatedProducts';
+import CardGroupComponent from '../../components/Card/CardGroup/CardGroupComponent';
+import ClothingComponent from '../../components/Card/ClothingCard/ClothingComponent';
+import * as S from './ProductPageStyles';
 
 const ProductPage = () => {
+    const { id } = useParams<{ id: string }>();
     const { product, isLoading, error } = useProduct();
+    const [selectedMediaId, setSelectedMediaId] = useState<string | null>(null);
+
+    const { relatedProducts } = useRelatedProducts(product);
+
+    useEffect(() => {
+        if (product && product.images.length > 0) {
+            const initialImg = product.images.find(img => img.type === 'primary') || product.images[0];
+            setSelectedMediaId(initialImg.id);
+        }
+        window.scrollTo({ top: 0 });
+    }, [product, id]);
 
     if (isLoading) {
-        return <HomeContainer style={{ justifyContent: 'center', color: '#666' }}>Carregando produto...</HomeContainer>;
+        return (
+            <S.PageLayout style={{ justifyContent: 'center', alignItems: 'center', height: '80vh', color: '#666' }}>
+                Carregando produto...
+            </S.PageLayout>
+        );
     }
 
     if (error || !product) {
-        return <HomeContainer style={{ justifyContent: 'center', color: 'red' }}>{error || 'Produto não encontrado'}</HomeContainer>;
+        return (
+            <S.PageLayout style={{ justifyContent: 'center', alignItems: 'center', height: '80vh', color: 'red' }}>
+                {error || 'Produto não encontrado'}
+            </S.PageLayout>
+        );
     }
 
+    const sortedImages = [...product.images].sort((a, b) => a.order - b.order);
+    const mediaItems = [
+        ...sortedImages.map(img => ({ id: img.id, url: img.url, alt: img.alt, type: 'image' as const })),
+        ...(product.videos || []).map(vid => ({ id: vid.id, url: vid.url, alt: vid.alt, type: 'video' as const }))
+    ];
+
+    const selectedMedia = mediaItems.find(item => item.id === selectedMediaId) || mediaItems[0];
+
+    const formatPrice = (price: number | null) => {
+        if (price === null) return 'Preço indisponível';
+        return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price);
+    };
+
     return (
-        <HomeContainer style={{ justifyContent: 'center', textAlign: 'center' }}>
-            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '20px' }}>
-                {/* Render Imagens */}
-                {product.images.map((img) => (
-                    <img
-                        key={img.id}
-                        src={img.url}
-                        alt={img.alt}
-                        style={{ maxWidth: '300px', borderRadius: '10px' }}
-                    />
-                ))}
+        <S.PageLayout>
+            <S.GallerySection>
+                {mediaItems.length > 1 && (
+                    <S.ThumbnailList>
+                        {mediaItems.map((item, index) => (
+                            <S.ThumbnailButton
+                                key={item.id}
+                                type="button"
+                                $active={selectedMediaId === item.id}
+                                onClick={() => setSelectedMediaId(item.id)}
+                                aria-label={`Ver ${item.type === 'image' ? 'imagem' : 'vídeo'} ${index + 1} de ${mediaItems.length}`}
+                                aria-pressed={selectedMediaId === item.id}
+                            >
+                                {item.type === 'image' ? (
+                                    <img src={item.url} alt={item.alt} />
+                                ) : (
+                                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                                        <video src={item.url} preload="metadata" muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <div style={{
+                                            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+                                            backgroundColor: 'rgba(0,0,0,0.5)', color: 'white', borderRadius: '50%',
+                                            width: '24px', height: '24px', display: 'flex', alignItems: 'center',
+                                            justifyContent: 'center', fontSize: '12px', pointerEvents: 'none'
+                                        }}>▶</div>
+                                    </div>
+                                )}
+                            </S.ThumbnailButton>
+                        ))}
+                    </S.ThumbnailList>
+                )}
+                <S.MainView>
+                    {selectedMedia && (
+                        selectedMedia.type === 'image' ? (
+                            <img
+                                src={selectedMedia.url}
+                                alt={selectedMedia.alt}
+                                onError={() => {
+                                    console.error(`Falha ao carregar imagem: ${selectedMedia.url}`);
+                                }}
+                            />
+                        ) : (
+                            <video
+                                src={selectedMedia.url}
+                                controls
+                                muted
+                                loop
+                                playsInline
+                                autoPlay
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                        )
+                    )}
+                </S.MainView>
+            </S.GallerySection>
 
-                {/* Render Vídeos - Correção: Usando tag <video> em vez de <img> */}
-                {product.videos && product.videos.map((vid) => (
-                    <video
-                        key={vid.id}
-                        src={vid.url}
-                        controls
-                        autoPlay
-                        muted
-                        loop
-                        style={{ maxWidth: '300px', borderRadius: '10px' }}
-                    >
-                        Seu navegador não suporta vídeos.
-                    </video>
-                ))}
-            </section>
+            <S.InfoSection>
+                <S.ProductTitle>{product.name}</S.ProductTitle>
 
-            <h1 style={{ fontSize: '2rem', margin: '10px 0' }}>{product.name}</h1>
-            <p style={{ maxWidth: '600px', color: '#666' }}>{product.description || 'Sem descrição disponível'}</p>
-            <p style={{ fontWeight: 'bold', fontSize: '1.5rem', margin: '20px 0' }}>
-                {product.price ? `R$ ${product.price}` : 'Preço indisponível'}
-            </p>
-            <a href="/" style={{ marginTop: '20px', color: '#666', textDecoration: 'underline', cursor: 'pointer' }}>
-                Voltar para Home
-            </a>
-        </HomeContainer>
+                <S.ProductSubtitle>
+                    {product.description?.split('.')[0] || 'Produto de alta qualidade'}
+                </S.ProductSubtitle>
+
+                <S.ProductPrice>{formatPrice(product.price)}</S.ProductPrice>
+
+                <S.ProductDescription>
+                    {product.description || 'Sem descrição detalhada disponível.'}
+                </S.ProductDescription>
+
+                <S.BackLink to="/">Voltar para Home</S.BackLink>
+            </S.InfoSection>
+
+            {relatedProducts.length > 0 && (
+                <S.RelatedSection>
+                    <CardGroupComponent title="Você também pode gostar">
+                        {relatedProducts.map(rp => (
+                            <ClothingComponent
+                                key={rp.id}
+                                productId={rp.id}
+                                title={rp.name}
+                                description={''}
+                                price={rp.price}
+                                pathImage={rp.images[0]?.url}
+                            />
+                        ))}
+                    </CardGroupComponent>
+                </S.RelatedSection>
+            )}
+        </S.PageLayout>
     );
-}
+};
 
 export default ProductPage;

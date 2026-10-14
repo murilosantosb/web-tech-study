@@ -116,7 +116,7 @@ export const MenuOverlay = styled.div`
     backdrop-filter: blur(2px);
 `;
 
-export const MobilePanel = styled.div`
+export const MobilePanel = styled.div<{ isOpen?: boolean }>`
     width: 80%;
     max-width: 300px;
     height: 100%;
