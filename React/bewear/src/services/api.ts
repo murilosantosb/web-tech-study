@@ -1,6 +1,6 @@
 import type { Brand, Category, Product, Banner, HomeConfig } from '../types/store';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'http://localhost:3000';
 
 async function fetchData<T>(endpoint: string): Promise<T> {
     try {

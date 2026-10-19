@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, Search, ShoppingBag, Menu, X } from 'lucide-react';
+import { useCart } from '../../contexts/CartContext';
 import {
     NavBarContainer,
     TopRow,
@@ -19,9 +20,11 @@ import {
     MobileOnly,
     DesktopOnly
 } from './NavBarStyles';
+import { Link } from 'react-router-dom';
 
 const NavBarComponent = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { setIsOpen: setCartOpen } = useCart();
 
     const categories = [
         "Camisetas",
@@ -71,7 +74,9 @@ const NavBarComponent = () => {
                 </LeftSection>
 
                 <CenterSection>
-                    <img src="/Logo.png" alt="BEWEAR Logo" />
+                    <Link to={"/"}>
+                        <img src="/Logo.png" alt="BEWEAR Logo" />
+                    </Link>
                 </CenterSection>
 
                 <RightSection>
@@ -79,7 +84,11 @@ const NavBarComponent = () => {
                         <Search size={20} />
                     </DesktopOnly>
                     <Divider />
-                    <ShoppingBag size={20} />
+                    <ShoppingBag
+                        size={20}
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => setCartOpen(true)}
+                    />
                     <MobileOnly>
                         <button
                             onClick={toggleMenu}
@@ -104,7 +113,7 @@ const NavBarComponent = () => {
             {isMenuOpen && (
                 <MenuOverlay onClick={() => setIsMenuOpen(false)}>
                     <MobilePanel
-                        isOpen={isMenuOpen}
+                        $isOpen={isMenuOpen}
                         onClick={(e) => e.stopPropagation()}
                         id="mobile-menu"
                     >

@@ -2,14 +2,19 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProduct } from '../../hooks/useProduct';
 import { useRelatedProducts } from '../../hooks/useRelatedProducts';
+import { useCart } from '../../contexts/CartContext';
 import CardGroupComponent from '../../components/Card/CardGroup/CardGroupComponent';
 import ClothingComponent from '../../components/Card/ClothingCard/ClothingComponent';
 import * as S from './ProductPageStyles';
+import ButtonComponent from '../../components/Button/ButtonComponent/ButtonComponent';
+import QuantitySelectorComponent from '../../components/Button/QuantitySelectorComponent/QuantitySelectorComponent';
 
 const ProductPage = () => {
     const { id } = useParams<{ id: string }>();
     const { product, isLoading, error } = useProduct();
+    const { addToCart } = useCart();
     const [selectedMediaId, setSelectedMediaId] = useState<string | null>(null);
+    const [quantity, setQuantity] = useState(1);
 
     const { relatedProducts } = useRelatedProducts(product);
 
@@ -118,6 +123,26 @@ const ProductPage = () => {
                 <S.ProductDescription>
                     {product.description || 'Sem descrição detalhada disponível.'}
                 </S.ProductDescription>
+                
+                <section className='quantidade-produto-container'>
+                    <p>Quantidade</p>
+                    <QuantitySelectorComponent
+                        value={quantity}
+                        onChange={(newQty) => setQuantity(newQty)}
+                    />
+                </section>
+                <section className='buttons-container'>
+                    <ButtonComponent
+                        title='Adicionar à sacola'
+                        variant='secondary'
+                        onClick={() => product && addToCart(product, quantity)}
+                    />
+                    <ButtonComponent
+                        title='Comprar agora'
+                        variant='primary'
+                        onClick={() => product && addToCart(product, quantity)}
+                    />
+                </section>
 
                 <S.BackLink to="/">Voltar para Home</S.BackLink>
             </S.InfoSection>

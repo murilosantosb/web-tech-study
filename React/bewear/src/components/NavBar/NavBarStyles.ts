@@ -116,7 +116,7 @@ export const MenuOverlay = styled.div`
     backdrop-filter: blur(2px);
 `;
 
-export const MobilePanel = styled.div<{ isOpen?: boolean }>`
+export const MobilePanel = styled.div<{ $isOpen?: boolean }>`
     width: 80%;
     max-width: 300px;
     height: 100%;
@@ -127,7 +127,7 @@ export const MobilePanel = styled.div<{ isOpen?: boolean }>`
     padding: 20px;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    transform: ${props => props.isOpen ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${props => props.$isOpen ? 'translateX(0)' : 'translateX(100%)'};
 `;
 
 export const PanelHeader = styled.div`

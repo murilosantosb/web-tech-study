@@ -11,6 +11,26 @@ export const PageLayout = styled.div`
   padding: 20px;
   box-sizing: border-box;
 
+  & section.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  & section.quantidade-produto-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 5px;
+
+    p {
+      font-weight: 600;
+    }
+  }
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 380px;
@@ -148,3 +168,4 @@ export const RelatedSection = styled.section`
   margin-top: 40px;
   padding-bottom: 40px;
 `;
+
