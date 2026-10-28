@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.estilo-borda, .container .servicos .card {
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.container header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.container nav a:hover {
+  color: #5936cf;
+  text-decoration: underline;
+}
+.container .banner {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+  text-align: center;
+}
+.container .banner h1 {
+  color: #5936cf;
+}
+.container .banner .botao {
+  display: inline-block;
+  padding: 20px;
+  background-color: #5936cf;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.container .banner .botao:hover {
+  background-color: red;
+}
+.container .servicos {
+  display: flex;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.container .servicos .card {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.container .servicos .card h3 {
+  color: #5936cf;
+}
+.container .servicos .card:hover {
+  background-color: #e5e0fa;
+  cursor: pointer;
+}
+.container .servicos .card p {
+  line-height: 21px;
+}
+.container footer {
+  background-color: #5936cf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  header .servicos {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
